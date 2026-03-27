@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savor | Premium Cooking Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Savor.</div>
+        <div class="search-container">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search for a recipe...">
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active">Discover</a>
+            <a href="#">Categories</a>
+            <a href="#">About</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Elevate Your <span class="highlight">Culinary</span> Journey</h1>
+            <p>Discover hand-crafted, premium recipes for every occasion. Curated by top chefs for the home cook.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="recipe-section">
+            <div class="section-header">
+                <h2>Trending Recipes</h2>
+                <div class="filter-pills">
+                    <button class="active">All</button>
+                    <button>Dinner</button>
+                    <button>Healthy</button>
+                    <button>Dessert</button>
+                </div>
+            </div>
+            
+            <div class="recipe-grid" id="recipeGrid">
+                <!-- Recipes will be injected here via JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Detailed Recipe Modal -->
+    <div class="modal-overlay" id="recipeModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal"><i class="fa-solid fa-times"></i></button>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img src="" alt="Recipe Image" id="modalImage">
+                    <div class="modal-tags" id="modalTags"></div>
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle">Recipe Title</h2>
+                    <p class="modal-desc" id="modalDesc">Description goes here</p>
+                    
+                    <div class="modal-meta">
+                        <span id="modalTime"><i class="fa-regular fa-clock"></i> 30 mins</span>
+                        <span id="modalDifficulty"><i class="fa-solid fa-chart-simple"></i> Medium</span>
+                        <span id="modalServings"><i class="fa-solid fa-user-group"></i> 2 Servings</span>
+                    </div>
+
+                    <div class="modal-details">
+                        <div class="ingredients">
+                            <h3>Ingredients</h3>
+                            <ul id="modalIngredients"></ul>
+                        </div>
+                        <div class="instructions">
+                            <h3>Instructions</h3>
+                            <ol id="modalInstructions"></ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
